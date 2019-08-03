@@ -8,7 +8,7 @@
 <title>Test</title>
 </head>
 <body>
- <p> bonjour tahiiix !! </p>
+ <p> bonjour tahix ! </p>
  
  <p>
     <%
