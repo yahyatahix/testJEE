@@ -5,10 +5,18 @@
     <servlet-name>Test</servlet-name>
     <servlet-class>ma.tahix.servlet.TestServlet</servlet-class>
   </servlet>
-  
   <servlet-mapping>
     <servlet-name>Test</servlet-name>
     <url-pattern>/bonjour</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>Acceuil</servlet-name>
+    <servlet-class>ma.tahix.servlet.AcceuilServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Acceuil</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
