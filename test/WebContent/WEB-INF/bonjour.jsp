@@ -9,11 +9,10 @@
 </head>
 <body>
  <p> tahiix dit bonjour à
- 
-	<% String name = (String) request.getAttribute("name");
-	out.println(name);
-	 %>
-
+ 	 ${ name }
+ </p>
+ <p>
+	Bonjour	${ noms[2] }
  </p>
  
 
