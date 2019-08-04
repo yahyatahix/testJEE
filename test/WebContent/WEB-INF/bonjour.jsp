@@ -8,12 +8,11 @@
 <title>Bonjour</title>
 </head>
 <body>
- <p> tahiix dit bonjour à
- 	 ${ name }
+ <p> tahiix dit bonjour 
  </p>
- <p>
-	Bonjour	${ noms[2] }
- </p>
+
+        <p>Bonjour ${ auteur.prenom } ${ auteur.nom }</p>
+        <p>${ auteur.actif ? 'Vous êtes très actif !' : 'Vous êtes inactif !' }</p>
  
 
 <p>

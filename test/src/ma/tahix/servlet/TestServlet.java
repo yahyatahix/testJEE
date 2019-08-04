@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import ma.tahix.beans.Auteur;
+
 
 @WebServlet("/TestServlet")
 public class TestServlet extends HttpServlet {
@@ -21,10 +23,12 @@ public class TestServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	String name = request.getParameter("name");
-    	request.setAttribute("name", name);
-    	String[] noms = {"Mathieu", "Robert", "François"};
-        request.setAttribute("noms", noms);
+    	Auteur auteur = new Auteur();
+        auteur.setPrenom("Mathieu");
+        auteur.setNom("Nebra");
+        auteur.setActif(true);
+        
+        request.setAttribute("auteur", auteur);
     	this.getServletContext().getRequestDispatcher("/WEB-INF/bonjour.jsp").forward(request, response);
     }
 
