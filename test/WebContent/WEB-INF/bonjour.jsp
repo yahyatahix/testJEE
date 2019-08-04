@@ -8,22 +8,18 @@
 <title>Bonjour</title>
 </head>
 <body>
- <p> bonjour tahiiix !! </p>
+ <p> tahiix dit bonjour à
  
- <p>
-    <%
-        String heure = (String) request.getAttribute("heure");
-        if (heure.equals("jour")) {
-            out.println("Bonjour"); 
-        }
-        else {
-            out.println("Bonsoir");
-        }
-    %>
-</p>
+	<% String name = (String) request.getAttribute("name");
+	out.println(name);
+	 %>
+
+ </p>
+ 
+
 <p>
     <%
-        for (int i = 0 ; i < 20 ; i++) {
+        for (int i = 0 ; i < 2 ; i++) {
             out.println("Une nouvelle ligne !<br />");
         }
     %>
