@@ -1,6 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,15 +9,22 @@
  </p>
 
         <p>Bonjour ${ auteur.prenom } ${ auteur.nom }</p>
-        <p>${ auteur.actif ? 'Vous Ãªtes trÃ¨s actif !' : 'Vous Ãªtes inactif !' }</p>
+        <p>${ auteur.actif ? 'Vous êtes très actif !' : 'Vous êtes inactif !' }</p>
  
 
+
+
 <p>
+
     <%
         for (int i = 0 ; i < 2 ; i++) {
             out.println("Une nouvelle ligne !<br />");
         }
     %>
+</p>
+		<c:out value="Bonjour !" />
+<p>
+
 </p>
  
 </body>
