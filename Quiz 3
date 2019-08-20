@@ -1,0 +1,116 @@
+Quiz 3
+
+    Utiliser la bibliothèque JSTL pour organiser son code
+
+    Question 1
+
+    Pourquoi est-il conseillé d'utiliser la JSTL ?
+        Cela clarifie la lecture du code et évite de mélanger HTML et Java.
+
+    Il faut réellement éviter aujourd'hui d'écrire du Java dans ses JSP.
+    La JSTL nous permet de rédiger des vues faciles à lire et à écrire.
+   
+   Question 2
+
+    Quelle portion de la JSTL gère les boucles dans les JSP ?
+
+        Core
+
+        XML FAUX
+
+        Format FAUX
+
+    La bibliothèque Core est la principale bibliothèque de la JSTL. 
+    C'est celle que nous étudions dans ce cours. On y trouve toutes les fonctionnalités de base.
+    
+    Question 3
+
+    Vrai ou faux ? La JSTL fonctionne dans les JSP sans aucune configuration particulière.
+        Faux
+
+    Il faut indiquer en préambule de la page JSP que nous utilisons la bibliothèque JSTL.
+    Question 4
+
+    De quel type de faille web la balise <c:out /> nous prémunit-elle ?
+
+        Injection SQL
+
+        XSS VRAI
+
+        CSRF
+
+    La faille XSS permet à un visiteur d'insérer du code HTML / JavaScript dans une page. La JSTL "annule" tout code HTML envoyé en affichant des balises HTML plutôt que de les interpréter.
+    Question 5
+
+    Je souhaite définir une variable que l'on pourra lire depuis un autre fichier JSP, à condition que cette variable ne soit valable que pendant le chargement de cette page pour ce visiteur. Quelle portée dois-je donner à cette variable ?
+
+        page 
+
+        request  VRAI
+
+        session
+
+        application
+
+    La requête (request) correspond à la requête HTTP en cours. On pourra accéder à la variable depuis un autre fichier JSP, mais à condition qu'il s'agisse du même chargement de page. A la page suivante, la variable aura disparu.
+    Question 6
+
+    Comment accède-t-on à la propriété montant du Java Bean transaction avec Expression Language ?
+
+        ${ montant.transaction }
+
+        ${ transaction.montant } VRAI
+
+        ${ montant->transaction }
+
+        ${ montant->transaction }
+
+    Il est vital de connaître cette syntaxe car vous l'utiliserez régulièrement !
+    Question 7
+
+    Il n'existe pas de "else if" en JSTL. Si je souhaite faire plusieurs tests d'affilée, qu'est-ce qu'il est conseillé d'utiliser ?
+
+        <c:choose> VRAI
+
+        <c:select>
+
+        <c:for>
+
+    La syntaxe <c:choose> (spécifique à la JSTL) permet de faire plusieurs tests d'affilée. On peut le voir comme un "if" avec de multiples "else if".
+    Question 8
+
+    Quelle balise JSTL permet de faire une boucle sur un array ?
+
+        <c:for>
+
+        <c:forEach>  VRAI
+
+        <c:forTokens>
+
+    Cette balise permet aussi bien de boucler un nombre de fois défini (de 0 à 10) que de boucler sur un array (tableau).
+    Question 9
+
+    Que peut-on trouver dans la variable de statut (définie grâce à l'attribut varStatus) d'une boucle JSTL ?
+
+        Le nombre d'éléments dans le tableau VRAI
+
+        La date de création du tableau
+
+        La durée de vie du tableau
+
+    Cette variable de statut est très pratique ! Elle permet aussi de savoir à quel indice du tableau nous nous trouvons à chaque tour de boucle, quel est le dernier élément du tableau, etc.
+    Question 10
+
+    Que va afficher le code suivant ?
+
+     <c:if test="${ 50 < 10 }" var="variable">
+         C'est vrai !
+     </c:if>
+
+        C'est vrai !
+
+        C'est faux !
+
+        (Rien du tout) VRAI
+
+    50 n'est pas inférieur à 10. La condition n'étant pas remplie, on n'affichera pas ce qui se trouve dans le if. Donc rien n'apparaîtra à l'écran dans le cas présent.
